@@ -39,15 +39,8 @@
     <tbody id="userTableBody"></tbody>
 </table>
 <script>
-    // Define headers
-    const headers = new Headers();
-    headers.append('origin', '1ff5fdfc47dc93ba99dc44d274620d94bf816cae3996704d3bdfcd099990ce99');
-
-    // Fetch data from the provided URL with headers
-    fetch('https://cors-anywhere.herokuapp.com/192.241.152.88:8081/users/getUsersInfo/', {
-        method: 'GET',
-        headers: headers,
-    })
+    // Fetch data from the provided URL
+    fetch('http://192.241.152.88:8081/users/getUsersInfo/')
         .then(response => response.json())
         .then(data => {
             // Extract the 'data' array from the JSON response
